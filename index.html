@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Single-page application</title>
+    <script src="scripts/jquery-3.1.1.min.js"></script>
+    <script src="scripts/app.js"></script>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body onload="startApp()">
+
+<div id="container">
+    <nav id="navigation">
+        <a href="#" class="anonymous" id="homeAppNavigationLink">Home</a>
+        <a href="#" class="anonymous" id="loginNavigationLink">Login</a>
+        <a href="#" class="anonymous" id="registerNavigationLink">Register</a>
+
+        <a href="#" class="user-only" id="homeUserNavigationLink">Home</a>
+        <a href="#" class="user-only" id="myMessagesNavigationLink">My Messages</a>
+        <a href="#" class="user-only" id="archiveNavigationLink">Archive</a>
+        <a href="#" class="user-only" id="sendMessageNavigationLink">Send Message</a>
+        <a href="#" class="user-only" id="logoutLink">Logout</a>
+    </nav>
+    <span id="spanLoggedInUser">Welcome, {user}!</span>
+
+
+
+</div>
+<footer>
+    Single-page Application (educational purpose only)
+</footer>
+</body>
+</html>
