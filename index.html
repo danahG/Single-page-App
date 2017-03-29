@@ -23,11 +23,41 @@
     </nav>
     <span id="spanLoggedInUser">Welcome, {user}!</span>
 
+    <section id="viewLogin">
+        <form id="loginForm">
+            <h1 class="login-title">please login</h1>
+            <div class="login-component">
+                <label class="usernameLogin"></label>
+                <input type="text" name="username" id="loginUsername" placeholder="username" required>
+            </div>
+            <div class="login-component">
+                <label class="passwordLogin"></label>
+                <input type="password" name="password" id="loginPassword" placeholder="password" required>
+            </div>
+            <input class="login-button" type="submit" value="Login">
+            </form>
+    </section>
+
+    <section id="viewRegister">
+        <form id="registerForm">
+            <h1 class="register-title">please register</h1>
+            <div class="register-component">
+                <label class="usernameRegister"></label>
+                <input type="text" name="username" id="registerUsername" placeholder="username" required>
+            </div>
+            <div class="register-component">
+                <label class="passwordRegister"></label>
+                <input type="password" name="password" id="registerPassword" placeholder="password" required>
+            </div>
+            <input class="register-button" type="submit" value="Register">
+        </form>
+    </section>
+
 
 
 </div>
 <footer>
-    Single-page Application (educational purpose only)
+    Messaging System - Simple SPA Application (educational purpose only)
 </footer>
 </body>
 </html>
