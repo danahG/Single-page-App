@@ -5,8 +5,12 @@
     <title>Single-page application</title>
     <script src="scripts/jquery-3.1.1.min.js"></script>
     <script src="scripts/app.js"></script>
+    <script src="scripts/views.js"></script>
+    <script src="scripts/authorization.js"></script>
+    <script src="scripts/utility.js"></script>
     <link rel="stylesheet" href="styles/main.css">
-</head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <body onload="startApp()">
 
 <div id="container">
@@ -23,9 +27,22 @@
     </nav>
     <span id="spanLoggedInUser">Welcome, {user}!</span>
 
+    <section id="viewAppHome">
+        <div class="dog-container">
+            <div class="head">
+                <div class="nose"></div>
+                <div class="ear"></div>
+            </div>
+            <div class="dog-subtitles">We'come to doggo chat portal! How did you get here hooman?
+            </div>
+        </div>
+        <div class="dog-subtitles-small-res">We'come to doggo chat portal! How did you get here hooman?
+        </div>
+    </section>
+
     <section id="viewLogin">
         <form id="loginForm">
-            <h1 class="login-title">please login</h1>
+            <h1 class="login-title">have an account af? login:</h1>
             <div class="login-component">
                 <label class="usernameLogin"></label>
                 <input type="text" name="username" id="loginUsername" placeholder="username" required>
@@ -40,7 +57,7 @@
 
     <section id="viewRegister">
         <form id="registerForm">
-            <h1 class="register-title">please register</h1>
+            <h1 class="register-title">wolf sign up here:</h1>
             <div class="register-component">
                 <label class="usernameRegister"></label>
                 <input type="text" name="username" id="registerUsername" placeholder="username" required>
@@ -49,15 +66,18 @@
                 <label class="passwordRegister"></label>
                 <input type="password" name="password" id="registerPassword" placeholder="password" required>
             </div>
+            <div class="register-component">
+                <label class="fullNameRegister"></label>
+                <input type="text" name="name" id="registerFullName" placeholder="full name" required>
+            </div>
             <input class="register-button" type="submit" value="Register">
         </form>
     </section>
 
-
-
 </div>
 <footer>
-    Messaging System - Simple SPA Application (educational purpose only)
+    <i class="fa fa-paw first" aria-hidden="true"></i>
+    DOGGO Messaging System - Simple SPA Application
 </footer>
 </body>
 </html>
