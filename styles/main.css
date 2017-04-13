@@ -183,6 +183,20 @@ div .register-component {
     .dog-subtitles-small-res {
         font-size: 1.82em;
     }
+
+    .anonymous,
+    .user-only {
+        display: block;
+        margin: 12px;
+    }
+
+    #container {
+        height: 90vh;
+    }
+}
+
+*::selection {
+    color: #C6FF00;
 }
 
 
