@@ -9,10 +9,11 @@ body {
 }
 
 #container {
+    position: relative;
     background-color: #ffffff;
     width: 50%;
-    margin: 40px auto;
-    height: 78vh;
+    margin: 30px auto;
+    height: 82vh;
     box-shadow: 5px 5px 5px #00838F;
     text-align: center;
 }
@@ -20,6 +21,7 @@ body {
 nav {
     background-color: #80DEEA;
     padding: 20px;
+    position: relative;
 }
 
 .anonymous,
@@ -31,6 +33,61 @@ nav {
     font-size: 1.2em;
     border-bottom: 2px solid transparent;
 }
+
+#loadingBox,
+#errorBox,
+#infoBox {
+    position: absolute;
+    z-index: 9999;
+    padding: 16px;
+    text-transform: lowercase;
+    font-weight: 200;
+    font-size: 1.4em;
+    border: 1px solid #FF1744;
+    background-color: #ffffff;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+#errorBox {
+    border: 1px solid #FF1744;
+    color: #FF1744;
+    width: 100%;
+ }
+
+#errorBox:before {
+    font-family: FontAwesome;
+    content: '\f188';
+    color: #FF1744;
+    float: left;
+}
+
+#infoBox {
+    border: 1px solid #00E676;
+    color: #00E676;
+    width: 100%;
+}
+
+#infoBox:before {
+    font-family: FontAwesome;
+    content: '\f08a';
+    color: #00E676;
+    float: left;
+}
+
+#loadingBox {
+    border: 1px solid #C6FF00;
+    color: #C6FF00;
+    width: 100%;
+}
+
+#loadingBox:before {
+    font-family: FontAwesome;
+    content: '\f110';
+    color: #C6FF00;
+    float: left;
+}
+
 
 div .login-component,
 div .register-component {
@@ -71,6 +128,10 @@ div .register-component {
     cursor: pointer;
 }
 
+.login-button {
+    margin-top: 83px;
+}
+
 .login-button:hover,
 .register-button:hover {
 
@@ -78,12 +139,14 @@ div .register-component {
 
 /*Dog interpretation*/
 .head {
-    margin: 40px 40px;
+    margin: 70px 40px;
     height: 125px;
     width: 280px;
     background-color: #f1f1f1;
     box-shadow: 5px 5px 8px #b0b0b0;
     border-radius: 7px 7px 100px 7px;
+    border-right: 1px solid #00838F;
+    border-bottom: 1px solid #00838F;
     position: relative;
 }
 
@@ -122,8 +185,8 @@ div .register-component {
 .dog-subtitles {
     width: 220px;
     position: absolute;
-    top: 200px;
-    left: 720px;
+    top: 180px;
+    left: 370px;
     color: #00BCD4;
     font-weight: 100;
     font-size: 2em;

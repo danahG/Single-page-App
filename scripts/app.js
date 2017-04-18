@@ -76,7 +76,7 @@ function startApp() {
         $('#infoBox').show();
         setTimeout(function () {
             $('#infoBox').fadeOut();
-        }, 3000);
+        }, 10000);
     }
 
     function showError(errorMessage) {
