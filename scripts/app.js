@@ -8,9 +8,10 @@ function startApp() {
     $('#loginNavigationLink').click(showLoginView);
     $('#registerNavigationLink').click(showRegisterView);
 
-    $('#logoutLink').click(logout);
-
     // Bind user home links
+    $('#homeUserNavigationLink').click(showUserHomeView);
+    $('#chattingNavigationLink').click(showChatView);
+    $('#logoutLink').click(logout);
 
     // Bind form submit buttons
     $('#loginForm').submit(loginUser);
@@ -76,18 +77,18 @@ function startApp() {
         $('#infoBox').show();
         setTimeout(function () {
             $('#infoBox').fadeOut();
-        }, 10000);
+        }, 3000);
     }
 
     function showError(errorMessage) {
-        $('#errorBox').text('Error: ' + errorMessage);
+        $('#errorBox').text(errorMessage);
         $('#errorBox').show();
     }
 
     function handleAjaxError(event, response) {
         let errorMessage = JSON.stringify(response);
         if(response.readyState === 0) {
-            errorMessage = 'Cannot connect due to network error.';
+            errorMessage = 'no internet!!! reason to live?';
         }
         if(response.responseJSON && response.responseJSON.description) {
             errorMessage = response.responseJSON.description;
@@ -173,6 +174,9 @@ function startApp() {
         showView('viewUserHome');
     }
 
+    function showChatView() {
+        showView('viewChat');
+    }
 
 
 
@@ -198,9 +202,10 @@ function startApp() {
             url: kinveyBaseUrl + 'user/' + kinveyAppKey + '/_logout',
             headers: getKinveyAuthHeaders()
         });
+
         sessionStorage.clear();
         showCorrectNavigationLinks();
         showAppHomeView();
-        showInfo('Logout successful.');
+        showInfo('yoo left successfully');
     }
 }

@@ -17,9 +17,8 @@
         <a href="#" class="anonymous" id="registerNavigationLink">register</a>
 
         <a href="#" class="user-only" id="homeUserNavigationLink">home</a>
-        <a href="#" class="user-only" id="chattingNavigationLink">chat wolf woolf</a>
-        <a href="#" class="user-only" id="logoutLink">go to sleep</a>
-
+        <a href="#" class="user-only" id="chattingNavigationLink">conversation</a>
+        <a href="#" class="user-only" id="logoutLink">leave</a>
 
     </nav>
 
@@ -76,9 +75,36 @@
 
     <section id="viewUserHome">
         <h1 id="viewUserHomeHeading">Welcome, {user}!</h1>
-        <a href="#" id="linkUserHomeMyMessages">My Messages</a>
+
+        <a href="#" id="linkUserChat">conversation</a>
         <a href="#" id="linkUserHomeSendMessage">Send Message</a>
         <a href="#" id="linkUserHomeArchiveSent">Archive (Sent)</a>
+    </section>
+
+    <section id="viewChat">
+        <div class="chat-wrapper">
+            <div class="dog-row">
+                <div class="dog-avatar"><i class="fa fa-paw" aria-hidden="true"></i></div>
+                <div class="dog-talks">
+                    <div>hawoof hooman! hawoof hooman!</div>
+                </div>
+            </div>
+
+            <div class="human-row">
+                <div class="human-talks">
+                    <div>hawoof hooman! hawoof hooman!</div>
+                </div>
+                <div class="human-avatar"><i class="fa fa-user" aria-hidden="true"></i></div>
+            </div>
+        </div>
+
+
+        <div class="human-input">
+            <input type="text" class="human-send-msg">
+            <input type="submit" class="send-msg-button" value="send">
+        </div>
+
+
     </section>
 
 </div>
@@ -87,5 +113,6 @@
     <i class="fa fa-paw first" aria-hidden="true"></i>
     DOGGO Messaging System - Simple SPA Application
 </footer>
+
 </body>
 </html>

@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&subset=cyrillic,cyrillic-ext');
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
+*::selection {
+    color: #C6FF00;
+}
+
+
 body {
     font: 16px 'Open Sans', sans-serif;
     background-color: #00BCD4;
@@ -43,14 +48,12 @@ nav {
     text-transform: lowercase;
     font-weight: 200;
     font-size: 1.4em;
-    border: 1px solid #FF1744;
     background-color: #ffffff;
     max-width: 100%;
     box-sizing: border-box;
 }
 
 #errorBox {
-    border: 1px solid #FF1744;
     color: #FF1744;
     width: 100%;
  }
@@ -59,11 +62,11 @@ nav {
     font-family: FontAwesome;
     content: '\f188';
     color: #FF1744;
-    float: left;
+    margin-right: 12px;
+    font-weight: 600;
 }
 
 #infoBox {
-    border: 1px solid #00E676;
     color: #00E676;
     width: 100%;
 }
@@ -72,11 +75,11 @@ nav {
     font-family: FontAwesome;
     content: '\f08a';
     color: #00E676;
-    float: left;
+    margin-right: 12px;
+    font-weight: 600;
 }
 
 #loadingBox {
-    border: 1px solid #C6FF00;
     color: #C6FF00;
     width: 100%;
 }
@@ -85,7 +88,8 @@ nav {
     font-family: FontAwesome;
     content: '\f110';
     color: #C6FF00;
-    float: left;
+    margin-right: 12px;
+    font-weight: 600;
 }
 
 
@@ -105,9 +109,14 @@ div .register-component {
 #loginPassword,
 #registerUsername,
 #registerPassword,
-#registerFullName{
+#registerFullName {
     padding: 12px;
     text-align: center;
+}
+
+#loginUsername,
+#registerUsername {
+    margin-top: 6px;
 }
 
 ::-webkit-input-placeholder,
@@ -124,7 +133,7 @@ div .register-component {
     font-weight: 700;
     color: #005f68;
     background-color: #ffffff;
-    border: 1px solid #b0b0b0;
+    border: 1px solid transparent;
     cursor: pointer;
 }
 
@@ -258,8 +267,130 @@ div .register-component {
     }
 }
 
-*::selection {
-    color: #C6FF00;
+#viewUserHomeHeading {
+    text-transform: uppercase;
+    font-weight: 200;
+    color: #005f68;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#viewChat {
+    height: 432px;
+    position: relative;
+}
+
+.chat-wrapper {
+    padding: 12px;
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 86%;
+    border-bottom: 1px solid #ECEFF1;
+    margin-bottom: 10px;
+}
+
+.dog-row {
+    text-align: left;
+    margin-bottom: 8px;
+}
+
+.dog-avatar {
+    width: 20px;
+    height: 20px;
+    color: #00BCD4;
+    border-radius: 50%;
+    border: 1px solid #80DEEA;
+    padding: 4px;
+    display: inline-block;
+    margin-right: 6px;
+    font-size: 1.2em;
+    line-height: 1.2em;
+    text-align: center;
+}
+
+.dog-talks {
+    text-align: left;
+    border-left: 3px solid #80DEEA;
+    border-top: 1px solid #ECEFF1;
+    border-right: 1px solid #ECEFF1;
+    border-bottom: 1px solid #ECEFF1;
+    color: #00BCD4;
+    padding: 6px 12px 6px 12px;
+    border-radius: 2px 12px 12px 2px;
+    box-shadow: 3px 3px 3px #ECEFF1;
+    display: inline-block;
+}
+
+.human-row {
+    text-align: right;
+    margin-bottom: 8px;
+}
+
+
+
+.human-avatar {
+    width: 20px;
+    height: 20px;
+    color: #00BCD4;
+    border-radius: 50%;
+    border: 1px solid #80DEEA;
+    padding: 4px;
+    display: inline-block;
+    margin-left: 6px;
+    font-size: 1.2em;
+    line-height: 1.2em;
+    text-align: center;
+}
+
+.human-talks {
+    text-align: left;
+    border-right: 3px solid #80DEEA;
+    border-top: 1px solid #ECEFF1;
+    border-left: 1px solid #ECEFF1;
+    border-bottom: 1px solid #ECEFF1;
+    color: #00BCD4;
+    padding: 6px 12px 6px 8px;
+    border-radius: 12px 2px 2px 12px;
+    box-shadow: 3px 3px 3px #ECEFF1;
+    display: inline-block;
+}
+
+.human-input {
+    position: absolute;
+    width: 100%;
+    height: 12%;
+}
+
+.human-send-msg {
+    background-color: #ECEFF1;
+    outline: none;
+    border: none;
+    border-radius: 16px;
+    font-size: 1.1em;
+    line-height: 1.2em;
+    padding: 6px 12px;
+    color: #00838F;
+    width: 80%;
+}
+
+.send-msg-button {
+    padding: 12px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #005f68;
+    background-color: #ffffff;
+    border: 1px solid transparent;
+    cursor: pointer;
 }
 
 
